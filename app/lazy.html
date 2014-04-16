@@ -47,8 +47,8 @@
     <script type="text/javascript" charset="utf-8">
     $(function() {
         $("img.lazy").lazyload({
-            load: function() {
-                console.log('imgLoadHandler');
+            load: function(index) {
+                console.log(index + ' : ' + $("img.lazy")[index].getAttribute("data-original"));
             },
         });
     });
