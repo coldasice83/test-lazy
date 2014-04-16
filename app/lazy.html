@@ -48,7 +48,7 @@
     $(function() {
         $("img.lazy").lazyload({
             load: function(index) {
-                console.log('imgLoadHandler ' + index);
+                console.log(index + ' : ' + $("img.lazy")[index].getAttribute("data-original"));
             },
         });
     });
